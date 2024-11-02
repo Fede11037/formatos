@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispositivo Lúdico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .category-button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .video-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Elige una Categoría</h1>
+    <button class="category-button" onclick="showVideo('categoria1')">Categoría 1</button>
+    <button class="category-button" onclick="showVideo('categoria2')">Categoría 2</button>
+    <button class="category-button" onclick="showVideo('categoria3')">Categoría 3</button>
+
+    <div class="video-container" id="video-container">
+        <video id="video-loop" width="400" loop>
+            <source src="tu_video.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+        <br>
+        <button onclick="togglePlay()">Pausar / Reanudar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
